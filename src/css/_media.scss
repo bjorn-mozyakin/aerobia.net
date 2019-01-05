@@ -12,11 +12,15 @@
 }
 
 @media screen and (max-width: 700px) {
-  .logo {
-    margin: 20px auto;
+  .logo__link {
+    text-align: center;
   }
 
-  .top-panel {
+  .nav-panel {
+    background: linear-gradient(to bottom, $cBlack, $cBlack 50%, $cRed 50%, $cRed);
+  }
+
+  .nav-panel__content {
     display: flex;
     flex-direction: column;
   }
@@ -29,8 +33,18 @@
     flex-direction: column;
   }
 
-  .clubs {
+  .sidebar {
     width: 100%;
+  }
+
+  .users__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .user__link {
+    margin: 10px;
   }
 
   .clubs__list {
@@ -43,7 +57,7 @@
     flex-basis: 48%;
   }
 
-  .results {
+  .pages {
     border-left: 1px solid $cLines;
   }
 }

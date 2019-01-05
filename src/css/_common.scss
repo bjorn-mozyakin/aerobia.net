@@ -1,6 +1,6 @@
 ﻿/*Common styles*/
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
   font-size: 13px;
 }
 
@@ -125,19 +125,19 @@ td {
   }
 }
 
-.header,
+.logo-panel,
+.nav-panel,
 .main,
 .description,
 .footbar {
   width: 100%;
-  /*background-color: orange;*/
 }
 
-.header__content,
+.logo-panel__content,
+.nav-panel__content,
 .main__content,
 .description__content,
 .footbar__content {
-  /*background-color: yellow;*/
   box-sizing: border-box;
   max-width: $wMax;
   min-width: $wMin;
@@ -146,6 +146,25 @@ td {
   padding: 0 20px;
 }
 
+.nav-panel {
+  background: linear-gradient(to right, $cBlack, $cBlack 50%, $cRed 50%, $cRed);
+}
+
 .main__content {
   display: flex;
+}
+
+.sidebar {
+  flex: none;
+  box-sizing: border-box;
+  width: $wSidebar;
+  padding: 0 30px;
+  border-left: 1px solid $cLines;
+  border-right: 1px solid $cLines;
+}
+
+.page {
+  flex-grow: 1;
+  overflow-x: auto;
+  border-right: 1px solid $cLines;
 }

@@ -5,14 +5,17 @@
 </head>
 <body>
 
-  include ../modules/header
+  include ../modules/logo-panel
+  include ../modules/nav-panel
 
   <main class="main">
     <div class="main__content">
-
-      include ../modules/clubs
-      include ../modules/results
-
+      <aside class="sidebar">
+        include ../modules/clubs
+      </aside>
+      <section class="page">
+        include ../modules/results
+      </section>
     </div>
   </main>
 

@@ -359,7 +359,7 @@ th {
 /*Vars*/
 /*Common styles*/
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
   font-size: 13px; }
 
 a {
@@ -450,18 +450,18 @@ td {
   .details:hover {
     color: #33333e; }
 
-.header,
+.logo-panel,
+.nav-panel,
 .main,
 .description,
 .footbar {
-  width: 100%;
-  /*background-color: orange;*/ }
+  width: 100%; }
 
-.header__content,
+.logo-panel__content,
+.nav-panel__content,
 .main__content,
 .description__content,
 .footbar__content {
-  /*background-color: yellow;*/
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 980px;
@@ -470,19 +470,42 @@ td {
   margin: auto;
   padding: 0 20px; }
 
+.nav-panel {
+  background: -webkit-gradient(linear, left top, right top, from(#33333e), color-stop(50%, #33333e), color-stop(50%, #D4001C), to(#D4001C));
+  background: linear-gradient(to right, #33333e, #33333e 50%, #D4001C 50%, #D4001C); }
+
 .main__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
-/*Header*/
-.logo {
+.sidebar {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 245px;
+  padding: 0 30px;
+  border-left: 1px solid #E5E5E5;
+  border-right: 1px solid #E5E5E5; }
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow-x: auto;
+  border-right: 1px solid #E5E5E5; }
+
+.logo__link {
   display: block;
-  margin: 20px 0 20px 30px;
+  margin: 20px 30px; }
+
+.logo__img {
   width: 104px;
   height: 26px; }
 
-.top-panel {
+.nav-panel__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -570,23 +593,6 @@ td {
 .menu__rules_active::before {
   background-position: center -360px; }
 
-/*Main*/
-.main__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.clubs {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 245px;
-  padding: 0 30px;
-  border-left: 1px solid #E5E5E5;
-  border-right: 1px solid #E5E5E5; }
-
 .clubs__title {
   font-weight: 700;
   text-align: left; }
@@ -615,12 +621,21 @@ td {
   text-decoration: none;
   color: #333; }
 
-.results {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  overflow-x: auto;
-  border-right: 1px solid #E5E5E5; }
+.users {
+  padding: 10px 0;
+  border-bottom: 1px solid #E5E5E5; }
+
+.user__link {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 11px;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #999999; }
+  .user__link:hover {
+    text-decoration: none;
+    background-color: #8C8C8C; }
 
 .rules {
   padding: 0 20px;
@@ -735,9 +750,12 @@ td {
     width: 65%; } }
 
 @media screen and (max-width: 700px) {
-  .logo {
-    margin: 20px auto; }
-  .top-panel {
+  .logo__link {
+    text-align: center; }
+  .nav-panel {
+    background: -webkit-gradient(linear, left top, left bottom, from(#33333e), color-stop(50%, #33333e), color-stop(50%, #D4001C), to(#D4001C));
+    background: linear-gradient(to bottom, #33333e, #33333e 50%, #D4001C 50%, #D4001C); }
+  .nav-panel__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -752,8 +770,19 @@ td {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .clubs {
+  .sidebar {
     width: 100%; }
+  .users__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .user__link {
+    margin: 10px; }
   .clubs__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -766,7 +795,7 @@ td {
   .clubs__item {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%; }
-  .results {
+  .pages {
     border-left: 1px solid #E5E5E5; } }
 
 @media screen and (max-width: 580px) {

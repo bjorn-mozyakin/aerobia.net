@@ -1,19 +1,4 @@
-﻿
-/*Main*/
-.main__content {
-  display: flex;
-}
-
-.clubs {
-  flex: none;
-  box-sizing: border-box;
-  width: $wSidebar;
-  padding: 0 30px;
-  border-left: 1px solid $cLines;
-  border-right: 1px solid $cLines;
-}
-
-.clubs__title {
+﻿.clubs__title {
   font-weight: 700;
   text-align: left;
 }

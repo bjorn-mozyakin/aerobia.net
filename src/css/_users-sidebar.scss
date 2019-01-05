@@ -1,0 +1,19 @@
+﻿.users {
+  padding: 10px 0;
+  border-bottom: 1px solid $cLines;
+}
+
+.user__link {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 11px;
+  text-decoration: none;
+  color: $cWhite;
+  background-color: $cGray;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $cTh;
+  }
+}
