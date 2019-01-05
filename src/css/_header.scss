@@ -1,0 +1,103 @@
+﻿/*Header*/
+.logo {
+  display: block;
+  margin: 20px 0 20px 30px;
+  width: 104px;
+  height: 26px;
+}
+
+.top-panel {
+  display: flex;
+}
+
+.site-title {
+  flex: none;
+  width: $wSidebar;
+  height: $hNav;
+  line-height: $hNav;
+  margin: 0;
+  padding: 0;
+  background-color: $cBlack;
+  color: $cWhite;
+  text-align: center;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.nav {
+  flex-grow: 1;
+  display: flex;
+  height: $hNav;
+  background-color: $cRed;
+  color: $cWhite;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  margin: auto;
+}
+
+.menu__link {
+  display: block;
+  font-weight: 700;
+  text-decoration: none;
+  color: $cWhite;
+
+  &::before {
+    display: block;
+    height: 30px;
+    margin-bottom: 10px;
+    content: '';
+    background-image: url(../assets/navigation.png);
+    background-repeat: no-repeat;
+    background-size: 34px 760px;
+  }
+
+  &_active {
+    color: $cBlack;
+  }
+}
+
+.menu__table::before {
+  background-position: center -40px;
+}
+
+.menu__team::before {
+  background-position: center -80px;
+}
+
+.menu__users::before {
+  background-position: center 0;
+}
+
+.menu__statistics::before {
+  background-position: center -120px;
+}
+
+.menu__rules::before {
+  background-position: center -319px;
+}
+
+.menu__table_active::before {
+  background-position: center -200px;
+}
+
+.menu__team_active::before {
+  background-position: center -240px;
+}
+
+.menu__users_active::before {
+  background-position: center -160px;
+}
+
+.menu__statistics_active::before {
+  background-position: center -280px;
+}
+
+.menu__rules_active::before {
+  background-position: center -360px;
+}
+
+

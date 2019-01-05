@@ -1,0 +1,23 @@
+﻿.footbar {
+  height: 40px;
+  background-color: $cBlack;
+}
+
+.contacts {
+  display: flex;
+}
+
+.contact {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+
+}
+.contact__link {
+  color: $cWhite;
+  text-decoration: none;
+}
+
+.contact__email {
+  background-color: $cRed;
+}

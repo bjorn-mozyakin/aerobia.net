@@ -1,0 +1,43 @@
+﻿
+/*Main*/
+.main__content {
+  display: flex;
+}
+
+.clubs {
+  flex: none;
+  box-sizing: border-box;
+  width: $wSidebar;
+  padding: 0 30px;
+  border-left: 1px solid $cLines;
+  border-right: 1px solid $cLines;
+}
+
+.clubs__title {
+  font-weight: 700;
+  text-align: left;
+}
+
+.clubs__title-link {
+  text-decoration: none;
+  color:$cHeader;
+}
+
+.clubs__item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.clubs__item-avatar {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+.clubs__item-link {
+  margin: auto 0 auto 10px;
+  font-weight: 700;
+  text-decoration: none;
+  color:$cGrayDark;
+}

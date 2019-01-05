@@ -1,0 +1,80 @@
+﻿
+@media screen and (max-width: 800px) {
+  .download {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .description__text {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .logo {
+    margin: 20px auto;
+  }
+
+  .top-panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .site-title {
+    width: auto;
+  }
+
+  .main__content {
+    flex-direction: column;
+  }
+
+  .clubs {
+    width: 100%;
+  }
+
+  .clubs__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .clubs__item {
+    flex-basis: 48%;
+  }
+
+  .results {
+    border-left: 1px solid $cLines;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .description__text {
+    width: 100%;
+  }
+
+  .download {
+    position: static;
+    margin: 0 auto 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .menu__link {
+    font-size: 9px;
+  }
+
+  .contacts {
+    justify-content: space-around;
+  }
+
+  .contact {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .clubs__list {
+    flex-direction: column;
+  }
+}

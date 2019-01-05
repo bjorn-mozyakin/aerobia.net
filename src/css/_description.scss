@@ -1,0 +1,93 @@
+﻿.description {
+  box-sizing: border-box;
+  border-top: 1px solid $cLines;
+  color: #666;
+  background-color: $cGrayLight;
+}
+
+.description__content {
+  position: relative;
+}
+
+.description__title {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.description__text {
+  width: 450px;
+  color: #999;
+}
+
+.description__links {
+  margin-bottom: 30px;
+}
+
+.description__links a {
+  margin-right: 20px;
+  color: $cRed;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: $cBlack;
+  }
+}
+
+.download {
+  position: absolute;
+  right: 60px;
+  top: -19px;
+  width: 190px;
+}
+
+.download__title {
+  padding-top: 12px;
+  text-align: center;
+  font-weight: 700;
+  width: 190px;
+  height: 74px;
+  background-image: url(../assets/download.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.download__mobile {
+  text-align: center;
+
+  &::before {
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    height: 100%;
+  }
+}
+
+.mobile__iphone {
+  display: inline-block;
+  vertical-align: middle;
+  /*width: 23px;*/
+  height: 29px;
+  padding-left: 30px;
+  line-height: 29px;
+  content: '';
+  color: $cRed;
+  background-image: url(../assets/mobile.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /*background-size: 100%;*/
+  overflow: hidden;
+
+  &:hover {
+    color: $cBlack;
+  }
+}
+
+.mobile__android {
+  @extend .mobile__iphone;
+  background-position: 0 -39px;
+}
