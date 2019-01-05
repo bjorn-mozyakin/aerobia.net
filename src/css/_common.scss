@@ -1,11 +1,12 @@
 ﻿/*Common styles*/
 body {
-  font-family: "Helvetica Neue", Times, Arial, sans;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
 }
 
 a {
   text-decoration: underline;
+  cursor: pointer;
 
   &:hover,
   &:visited,
@@ -61,15 +62,28 @@ tr:nth-child(2n) {
   background-color: $cLines;
 }
 
+ // отменяем полосатость
 .table-playoff {
   tr:nth-child(2n) {
     background-color: $cWhite;
   }
 
+  // устанавливаем новую полосатость
   & tr:nth-child(4n+3),
   & tr:nth-child(4n) {
     background-color: $cLines;
   }
+
+  // отменяем скругление
+  & tr:last-child {
+    & td:first-child { border-bottom-left-radius: 0; }
+  }
+
+  // устанавливаем новую полосатость
+  & tr:nth-last-child(2) {
+    & td:first-child { border-bottom-left-radius: 5px; }
+  }
+
 }
 
 th {
@@ -90,6 +104,14 @@ td {
   font-size: 12px;
   color: #444;
   border-left: 1px solid rgb(219,219,219);
+
+  & a {
+    color: $cRed;
+
+    &:hover {
+      color: $cBlack;
+    }
+  }
 }
 
 .details {

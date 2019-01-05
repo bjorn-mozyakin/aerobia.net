@@ -359,11 +359,12 @@ th {
 /*Vars*/
 /*Common styles*/
 body {
-  font-family: "Helvetica Neue", Times, Arial, sans;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px; }
 
 a {
-  text-decoration: underline; }
+  text-decoration: underline;
+  cursor: pointer; }
   a:hover, a:visited, a:active {
     text-decoration: underline; }
 
@@ -413,6 +414,12 @@ tr:nth-child(2n) {
 .table-playoff tr:nth-child(4n) {
   background-color: #E5E5E5; }
 
+.table-playoff tr:last-child td:first-child {
+  border-bottom-left-radius: 0; }
+
+.table-playoff tr:nth-last-child(2) td:first-child {
+  border-bottom-left-radius: 5px; }
+
 th {
   padding: 3px 10px;
   text-align: left;
@@ -430,6 +437,10 @@ td {
   font-size: 12px;
   color: #444;
   border-left: 1px solid #dbdbdb; }
+  td a {
+    color: #D4001C; }
+    td a:hover {
+      color: #33333e; }
 
 .details {
   display: block;
