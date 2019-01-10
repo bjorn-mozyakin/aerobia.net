@@ -4,9 +4,14 @@
 }
 
 .user__link {
+  position: relative;
   display: block;
+  box-sizing: border-box;
   margin: 10px 0;
-  padding: 10px 20px;
+  padding: 0 20px;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
   font-size: 11px;
   font-weight: bold;
   text-decoration: none;
@@ -17,4 +22,24 @@
     text-decoration: none;
     background-color: $cTh;
   }
+
+  &.active {
+    background-color: $cBlack;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 20px;
+      height: 100%;
+      content: '';
+      background-color: $cBlack;
+      background-image:
+        linear-gradient(45deg, transparent 50%, white 50%),
+        linear-gradient(135deg, transparent 50%, white 50%);
+    }
+  }
 }
+
+
+

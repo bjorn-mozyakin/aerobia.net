@@ -381,6 +381,10 @@ h1 {
   text-align: center;
   color: #999; }
 
+h2 {
+  font-weight: normal;
+  color: #999; }
+
 h3 {
   font-weight: 700;
   color: #999; }
@@ -626,16 +630,34 @@ td {
   border-bottom: 1px solid #E5E5E5; }
 
 .user__link {
+  position: relative;
   display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 10px 0;
-  padding: 10px 20px;
+  padding: 0 20px;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
   font-size: 11px;
+  font-weight: bold;
   text-decoration: none;
   color: #FFF;
   background-color: #999999; }
   .user__link:hover {
     text-decoration: none;
     background-color: #8C8C8C; }
+  .user__link.active {
+    background-color: #33333e; }
+    .user__link.active::after {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 20px;
+      height: 100%;
+      content: '';
+      background-color: #33333e;
+      background-image: linear-gradient(45deg, transparent 50%, white 50%), linear-gradient(135deg, transparent 50%, white 50%); }
 
 .rules {
   padding: 0 20px;
@@ -644,6 +666,9 @@ td {
   .rules h3::before {
     counter-increment: faq;
     content: counter(faq) ". "; }
+
+.team__name {
+  text-align: center; }
 
 .description {
   -webkit-box-sizing: border-box;
